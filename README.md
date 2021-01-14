@@ -1,6 +1,6 @@
 # movie-api
 include directors/IMDB/movies
-<<<<<<< HEAD
+HEAD
 =======
 
 # Movies
