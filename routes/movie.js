@@ -14,6 +14,21 @@ router.post('/', function(req, res, next) {
   })
 });
 
+//between
+router.get('/between/:start/:end',(req,res)=>{
+  const{start,end}= req.params;
+  const promise = Movie.find(
+    {
+      year :{"$gte":parseInt(start),"$lte":parseInt(end)}
+    }
+    );
+    promise.then(data=>{
+      res.json(data);
+    }).catch(err=>{
+      res.json(err);
+    })
+})
+
 router.get('/',(req,res)=>{
   const promise = Movie.find({ });
   promise.then(data=>{
