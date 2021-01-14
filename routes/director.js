@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const mongo = require('mongoose');
 
 
 //Model
@@ -25,7 +26,8 @@ router.post('/',(req,res)=>{
     })
 });
 
-router.get('/:director_id',(req,res)=>{
+router.get('/:directorid',(req,res)=>{
+
     const promise = director.aggregate([
         {
             $lookup:{
@@ -34,14 +36,35 @@ router.get('/:director_id',(req,res)=>{
                 foreignField:'director_id',
                 as:'movies'
             }
-            
-        }
-    ])
-
+        },
+        {
+            $match:{
+                '_id':mongo.Types.ObjectId(req.params.directorid)
+            }
+        },
+        {
+            $unwind:{
+                path:'$movies',
+                preserveNullAndEmptyArrays:true
+            }
+        },
+        {
+            $group:{
+                _id:{
+                    _id:'$_id',
+                    name:'$name',
+                    surname:'$surname',
+                    bio:'$bio'
+                },
+                movies:{$push:'$movies'}
+            }   
+        },
+        
+    ]);
     promise.then(data=>{
-        res.json(data)
+        res.json(data);
     }).catch(err=>{
-        res.json(err);
+        res.json(err)
     })
 });
 
