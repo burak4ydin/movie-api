@@ -1,5 +1,10 @@
 # movie-api
 include directors/IMDB/movies
+<<<<<<< HEAD
+=======
+HEAD
+=======
+>>>>>>> origin/main
 
 # Movies
 
@@ -32,7 +37,16 @@ include directors/IMDB/movies
 | /authenticate | `POST` | { username: 'foo', password:'1234' } | Generate a token. |
 
 
+<<<<<<< HEAD
 # Demo
 [Live demo on Heroku](https://node-egitimi-movie-api.herokuapp.com/)
 
 enjoy!
+=======
+
+# Demo
+[Live demo on Heroku](https://node-egitimi-movie-api.herokuapp.com/)
+
+enjoy!
+>>>>>>> readme file updated
+>>>>>>> origin/main
