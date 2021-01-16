@@ -1,3 +1,5 @@
+[![Build status](https://travis-ci.com/burak4ydin/movie-api.svg?branch=main)](https://github.com/burak4ydin/movie-api)
+
 # movie-api
 include directors/IMDB/movies
 <<<<<<< HEAD
