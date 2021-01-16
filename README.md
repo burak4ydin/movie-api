@@ -12,11 +12,11 @@ HEAD
 | --- | --- | --- | --- |
 | /api/movies | `GET` | Empty | List all movies. |
 | /api/movies | `POST` | {'title':'foo', 'category':'bar', 'country':'Turkey', year:1990, director:"id", imdb_score: 9.7 } | Create a new movie. |
-| /api/movies/:movie_id | `GET` | Empty | Get a movie. |
-| /api/movies/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |
-| /api/movies/:movie_id | `DELETE` | Empty | Delete a movie. |
-| /api/movies/top10 | `GET` | Empty | Get the top 10 movies. |
-| /api/movies/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |
+| /api/movie/:movie_id | `GET` | Empty | Get a movie. |
+| /api/movie/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |
+| /api/movie/:movie_id | `DELETE` | Empty | Delete a movie. |
+| /api/movie/top10 | `GET` | Empty | Get the top 10 movies. |
+| /api/movie/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |
 
 # Directors
 
@@ -39,13 +39,13 @@ HEAD
 
 <<<<<<< HEAD
 # Demo
-[Live demo on Heroku](https://node-egitimi-movie-api.herokuapp.com/)
+[Live demo on Heroku](https://burak-aydin-movie-api.herokuapp.com/)
 
 enjoy!
 =======
 
 # Demo
-[Live demo on Heroku](https://node-egitimi-movie-api.herokuapp.com/)
+[Live demo on Heroku](https://burak-aydin-movie-api.herokuapp.com/)
 
 enjoy!
 >>>>>>> readme file updated
