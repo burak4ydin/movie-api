@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const mongo = require('mongoose');
 
 //Models
 const Movie = require('../Models/Movie');
@@ -48,8 +49,13 @@ router.get('/top10',(req,res)=>{
 });
 
 router.get('/:movie_id',(req,res)=>{
+  
   const promise=Movie.aggregate([
     {
+      $match:{
+        _id:mongo.Types.ObjectId(req.params.movie_id)
+      }
+    },{
       $lookup:{
         from:'directors',
         localField:'director_id',
