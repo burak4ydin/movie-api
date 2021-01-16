@@ -10,8 +10,8 @@ HEAD
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /api/movies | `GET` | Empty | List all movies. |
-| /api/movies | `POST` | {'title':'foo', 'category':'bar', 'country':'Turkey', year:1990, director:"id", imdb_score: 9.7 } | Create a new movie. |
+| /api/movie | `GET` | Empty | List all movies. |
+| /api/movie | `POST` | {'title':'foo', 'category':'bar', 'country':'Turkey', year:1990, director:"id", imdb_score: 9.7 } | Create a new movie. |
 | /api/movie/:movie_id | `GET` | Empty | Get a movie. |
 | /api/movie/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |
 | /api/movie/:movie_id | `DELETE` | Empty | Delete a movie. |
@@ -22,30 +22,30 @@ HEAD
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /api/directors | `GET` | Empty | List all directors. |
-| /api/directors | `POST` | { name: 'foo', surname:'bar', bio:'lorem ipsum' } | Create a new director. |
-| /api/directors/:director_id | `GET` | Empty | Get a director. |
-| /api/directors/:director_id | `PUT` | {'name':'foo', 'surname':'bar', 'bio': 'lorem'} | Update a director with new info. |
-| /api/directors/:director_id | `DELETE` | Empty | Delete a director. |
-| /api/directors/:director_id/best10movie | `GET` | Empty | The director's top 10 films. |
+| /api/director | `GET` | Empty | List all directors. |
+| /api/director | `POST` | { name: 'foo', surname:'bar', bio:'lorem ipsum' } | Create a new director. |
+| /api/director/:director_id | `GET` | Empty | Get a director. |
+| /api/director/:director_id | `PUT` | {'name':'foo', 'surname':'bar', 'bio': 'lorem'} | Update a director with new info. |
+| /api/director/:director_id | `DELETE` | Empty | Delete a director. |
+| /api/director/:director_id/best10movie | `GET` | Empty | The director's top 10 films. |
 
 # Index
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
 | --- | --- | --- | --- |
-| /register | `POST` | { username: 'foo', password:'1234' } | Create a new user. |
-| /authenticate | `POST` | { username: 'foo', password:'1234' } | Generate a token. |
+| /register | `POST` | { username: 'burak', password:'burak123' } | Create a new user. |
+| /authenticate | `POST` | { username: 'burak', password:'burak123' } | Generate a token. |
 
 
 <<<<<<< HEAD
 # Demo
-[Live demo on Heroku](https://burak-aydin-movie-api.herokuapp.com/)
+[Live demo on Heroku](https://burak-movie-api.herokuapp.com/)
 
 enjoy!
 =======
 
 # Demo
-[Live demo on Heroku](https://burak-aydin-movie-api.herokuapp.com/)
+[Live demo on Heroku](https://burak-movie-api.herokuapp.com/)
 
 enjoy!
 >>>>>>> readme file updated
